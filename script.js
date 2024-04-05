@@ -21,6 +21,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const state = document.getElementById("state").value;
     const country = document.getElementById("country").value;
 
+    // Check if any field is empty
+    if (
+      !firstName ||
+      !lastName ||
+      !address ||
+      !pincode ||
+      !gender ||
+      foods.length < 2 ||
+      !state ||
+      !country
+    ) {
+      alert("All fields are mandatory. Please fill out all the fields.");
+      return;
+    }
+
     // Create a new table row
     const newRow = document.createElement("tr");
 
